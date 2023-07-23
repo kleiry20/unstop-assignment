@@ -7,7 +7,7 @@
   min-width: auto !important;
 }
 
-:where(.css-dev-only-do-not-override-1jr9qlj).ant-menu-inline .ant-menu-item {
+.ant-menu-inline .ant-menu-item {
   height: auto;
   text-align: center;
   line-height: 0.938rem;

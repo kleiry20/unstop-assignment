@@ -26,7 +26,7 @@ const SideBar = ({ menu }: any) => {
       collapsedWidth={0}
       trigger={null}
     >
-      <Menu mode="inline" style={{ padding: "1rem" }}>
+      <Menu mode="inline" style={{ padding: "1rem", height: "100vh" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           <Menu.Item style={{ padding: "1rem" }}>
             <div
