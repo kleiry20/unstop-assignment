@@ -20,8 +20,8 @@ const NavBar = ({ menu }: any) => {
         onClick={() => setVisible(true)}
         style={{
           position: "absolute",
-          left: "30px",
-          top: "10px",
+          left: "13px",
+          top: "15px",
           backgroundColor: "#F2F8FE",
           borderRadius: "3.75rem",
           border: 0,
