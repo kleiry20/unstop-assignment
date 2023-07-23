@@ -1,0 +1,21 @@
+.sidebar {
+  height: 100vh;
+  /* margin-right: 24px; */
+  /* position: fixed; */
+  width: auto !important;
+  max-width: 200px;
+  min-width: auto !important;
+}
+
+:where(.css-dev-only-do-not-override-1jr9qlj).ant-menu-inline .ant-menu-item {
+  height: auto;
+  text-align: center;
+  line-height: 0.938rem;
+  padding-right: 0px;
+  width: auto;
+  margin: 0px;
+}
+.ant-menu-item .ant-menu-item-active .ant-menu-item-only-child {
+  padding: 0.625rem 1.25rem;
+  padding-inline: 0;
+}

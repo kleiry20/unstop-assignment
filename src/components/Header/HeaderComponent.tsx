@@ -2,6 +2,7 @@ import React from "react";
 import { Divider, Layout, Space } from "antd";
 
 import toggleButtonIcon from "../../assets/toggleButton.svg";
+import NavBar from "../NavBar/NavBar";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -52,7 +53,8 @@ const HeaderComponent: React.FC = () => (
       height: "4.375rem",
     }}
   >
-    <div style={{ display: "flex",flexWrap: "wrap", alignItems: "center" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
+      <NavBar />
       <p
         style={{
           color: "#1C4980",
