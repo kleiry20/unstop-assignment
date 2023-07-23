@@ -7,6 +7,7 @@ import closeIcon from "../../assets/closeIcon.svg";
 import SelectComponent from "../SelectComponent";
 import MultipleSelect from "../MultipleSelect";
 import TimePickerComponent from "../TimePickerComponent";
+import MultipleInput from "../MultipleInput/MultipleInput";
 
 const CloseIcon = () => {
   return (
@@ -129,7 +130,8 @@ const AssessmentModal: React.FC<AssessmentModalProps> = ({
           name="skills"
           labelCol={{ span: 16 }}
         >
-          <MultipleSelect />
+          <MultipleInput />
+          {/* <MultipleSelect /> */}
         </Form.Item>
         <Form.Item
           label={<p className="form-item-label">Duration of assessment</p>}

@@ -11,7 +11,7 @@ import { useState } from "react";
 import AssessmentModal from "../ModalComponent/AssessmentModal";
 
 export const EmptyAssessmentCard = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
 
   const handleOpenModal = () => {
     setModalVisible(true);

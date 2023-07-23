@@ -219,6 +219,7 @@ const StatisticsBar: React.FC = () => {
           border: "1px solid #DADCE0",
           borderRight: "none",
           borderRadius: "0.75rem 0 0 0.75rem",
+          width: "15%",
         }}
         count={34}
         icon={totalAssessmentIcon}
@@ -246,13 +247,14 @@ const StatisticsBar: React.FC = () => {
         subtitle1="Total Candidate"
         subtitle1Count={11145}
         subtitle1IncreaseCount={+12}
-        extraContent={
-          <DividerSection
-            subtitle1Count={3563}
-            subtitle1IncreaseCount={63}
-            subtitle1={"djf"}
-          />
-        }
+        
+        // extraContent={
+        //   <DividerSection
+        //     subtitle1Count={3563}
+        //     subtitle1IncreaseCount={63}
+        //     subtitle1={"djf"}
+        //   />
+        // }
       />
       <OverviewCard
         title="Total Purpose"
@@ -261,6 +263,7 @@ const StatisticsBar: React.FC = () => {
           border: "1px solid #DADCE0",
           borderLeft: "none",
           borderRadius: "0 0.75rem 0.75rem 0",
+          width: "15%",
         }}
         count={12}
         icon={totalPurposeIcon}

@@ -45,10 +45,11 @@ const NavBar = ({ menu }: any) => {
               <div
                 style={{
                   display: "flex",
-                  gap: "0.38rem",
+                  gap: "0.5rem",
+                  alignItems: "center",
                 }}
               >
-                <div>
+                <div style={{ display: "flex" }}>
                   <img src={DashboardIcon} alt="" />
                 </div>
                 <p>Dashboard</p>
@@ -58,10 +59,11 @@ const NavBar = ({ menu }: any) => {
               <div
                 style={{
                   display: "flex",
-                  gap: "0.38rem",
+                  gap: "0.5rem",
+                  alignItems: "center",
                 }}
               >
-                <div>
+                <div style={{ display: "flex" }}>
                   <img src={SiderAssessmentIcon} alt="SiderAssessmentIcon" />
                 </div>
                 <p>Assessment</p>
@@ -71,10 +73,11 @@ const NavBar = ({ menu }: any) => {
               <div
                 style={{
                   display: "flex",
-                  gap: "0.38rem",
+                  gap: "0.5rem",
+                  alignItems: "center",
                 }}
               >
-                <div>
+                <div style={{ display: "flex" }}>
                   <img src={LibraryIcon} alt="LibraryIcon" />
                 </div>
                 <p>Library</p>
@@ -94,13 +97,20 @@ const NavBar = ({ menu }: any) => {
               <div
                 style={{
                   display: "flex",
-                  gap: "0.38rem",
+                  justifyContent: "space-between",
                 }}
               >
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "0.5rem",
+                    alignItems: "center",
+                  }}
+                >
                   <img src={LibraryIcon} alt="LibraryIcon" />
+                  <p>Round Status</p>
                 </div>
-                <p>Round Status</p>
+
                 <Tag
                   color="red"
                   style={{
