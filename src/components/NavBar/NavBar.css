@@ -19,3 +19,11 @@
 .mobile-view-menu {
   background: var(--secondary-5, #f2f8fe);
 }
+.ant-drawer .ant-drawer-content {
+  background: #f2f8fe;
+}
+.ant-drawer-close {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
