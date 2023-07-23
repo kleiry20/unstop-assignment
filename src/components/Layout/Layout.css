@@ -71,6 +71,9 @@
   .div-right {
     margin: 0px;
   }
+  .div-left {
+    width: 0 !important;
+  }
   .sidebar {
     display: none;
   }
