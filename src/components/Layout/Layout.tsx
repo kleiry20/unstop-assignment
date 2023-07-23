@@ -29,7 +29,7 @@ const Layout = () => {
             <HeaderComponent />
           </div>
           <div className="main-content">
-            <div className="assessments-overview">
+            <div className="assessments-overview only-desktop-view">
               <p className="p-assessment">Assessments Overview</p>
               <StatisticsBar />
             </div>

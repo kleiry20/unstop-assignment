@@ -75,7 +75,8 @@
   .div-left {
     width: 0 !important;
   }
-  .sidebar {
+  .sidebar,
+  .only-desktop-view {
     display: none;
   }
   .ant-menu-light {
@@ -83,6 +84,12 @@
   }
   .ant-menu-light.ant-menu-root.ant-menu-inline {
     border: none;
+  }
+  .ant-card {
+    width: 100%;
+  }
+  .card-left {
+    flex-direction: unset !important;
   }
 }
 
