@@ -86,10 +86,11 @@ export const EmptyAssessmentCard = () => {
   );
 };
 
-const AssessmentCard = () => {
+const AssessmentCard = (props: any) => {
   return (
     <Card
       //   hoverable
+      className={`${props.class}`}
       style={{
         padding: "1rem",
         //   height: "13.0625rem",

@@ -93,6 +93,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .only-mobile-view {
+    display: none;
+  }
+}
+
 /* .card-row > * {
   width: calc(100% / 3);
 } */

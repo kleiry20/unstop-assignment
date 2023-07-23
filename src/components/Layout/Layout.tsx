@@ -50,6 +50,10 @@ const Layout = () => {
                 <EmptyAssessmentCard />
                 <AssessmentCard />
                 <AssessmentCard />
+                <AssessmentCard class="only-mobile-view" />
+                <AssessmentCard class="only-mobile-view" />
+                <AssessmentCard class="only-mobile-view" />
+                <AssessmentCard class="only-mobile-view" />
               </div>
             </div>
           </div>
