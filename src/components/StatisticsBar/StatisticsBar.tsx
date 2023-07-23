@@ -4,6 +4,8 @@ import { Card, Divider, Statistic } from "antd";
 
 import totalAssessmentIcon from "../../assets/totalAssessmentIcon.svg";
 import totalPurposeIcon from "../../assets/totalPurpose.svg";
+import candidateIcon from "../../assets/candidateIcon.svg";
+import sourceIcon from "../../assets/sourceIcon.svg";
 
 interface OverviewCardProps {
   style: CSSProperties;
@@ -17,15 +19,21 @@ interface OverviewCardLargeProps {
   title: string;
   count?: number;
   icon?: any;
-  subtitle1Count: number;
-  subtitle1IncreaseCount: number;
+  subtitle1Count: number | string;
+  subtitle1IncreaseCount: number | string;
   subtitle1: string;
+  subtitle2Count: number | string;
+  subtitle2IncreaseCount: number | string;
+  subtitle2: string;
+  subtitle3Count?: number | string;
+  subtitle3IncreaseCount?: number | string;
+  subtitle3?: string;
   extraContent?: any;
 }
 
 interface DividerSectionProps {
-  subtitle1Count: number;
-  subtitle1IncreaseCount: number;
+  subtitle1Count: number | string;
+  subtitle1IncreaseCount: number | string;
   subtitle1: string;
 }
 
@@ -42,7 +50,7 @@ export const OverviewCard = ({
         display: "flex",
         flexDirection: "column",
         rowGap: "0.5rem",
-        padding: "0rem 1.25rem",
+        padding: "1rem 1.25rem 0rem 1.25rem",
       }}
       style={style}
     >
@@ -53,12 +61,19 @@ export const OverviewCard = ({
           fontFamily: "Inter",
           fontSize: "0.875rem",
           fontStyle: "normal",
-          fontWeight: "500",
+          fontWeight: "600",
         }}
       >
         {title}
       </p>
-      <div style={{ display: "flex", gap: "0.625rem", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "0.625rem",
+          alignItems: "center",
+          marginTop: "8px",
+        }}
+      >
         <img src={icon} alt="" />
         <p
           style={{
@@ -83,6 +98,12 @@ export const OverviewCardLarge = ({
   subtitle1Count,
   subtitle1IncreaseCount,
   subtitle1,
+  subtitle2,
+  subtitle2Count,
+  subtitle2IncreaseCount,
+  subtitle3,
+  subtitle3Count,
+  subtitle3IncreaseCount,
   extraContent,
 }: OverviewCardLargeProps) => {
   return (
@@ -92,7 +113,8 @@ export const OverviewCardLarge = ({
         display: "flex",
         flexDirection: "column",
         rowGap: "0.5rem",
-        padding: "0rem 1.25rem",
+        // padding: "1rem 1.25rem 0rem 1.25rem",
+        padding: "1rem 2rem 0rem 1rem",
       }}
       style={style}
     >
@@ -109,7 +131,7 @@ export const OverviewCardLarge = ({
         {title}
       </p>
       <div style={{ display: "flex", gap: "1.25rem", alignItems: "center" }}>
-        <img src={totalAssessmentIcon} alt="totalAssessmentIcon" />
+        <img src={icon} alt="icon" />
         <div>
           <div
             style={{
@@ -175,7 +197,7 @@ export const OverviewCardLarge = ({
                   fontWeight: "700",
                 }}
               >
-                {subtitle1Count}
+                {subtitle2Count}
               </p>
             </div>
             <div>
@@ -188,7 +210,7 @@ export const OverviewCardLarge = ({
                   color: "#05C165",
                 }}
               >
-                {subtitle1IncreaseCount}
+                {subtitle2IncreaseCount}
               </p>
             </div>
           </div>
@@ -200,7 +222,7 @@ export const OverviewCardLarge = ({
               color: "#1C4980",
             }}
           >
-            {subtitle1}
+            {subtitle2}
           </p>
         </div>
         {extraContent ? (
@@ -225,7 +247,7 @@ export const OverviewCardLarge = ({
                     fontWeight: "700",
                   }}
                 >
-                  {subtitle1Count}
+                  {subtitle3Count}
                 </p>
               </div>
               <div>
@@ -238,7 +260,7 @@ export const OverviewCardLarge = ({
                     color: "#05C165",
                   }}
                 >
-                  {subtitle1IncreaseCount}
+                  {subtitle3IncreaseCount}
                 </p>
               </div>
             </div>
@@ -250,7 +272,7 @@ export const OverviewCardLarge = ({
                 color: "#1C4980",
               }}
             >
-              {subtitle1}
+              {subtitle3}
             </p>
           </div>
         ) : null}
@@ -283,29 +305,32 @@ const StatisticsBar: React.FC = () => {
           borderRadius: 0,
         }}
         subtitle1="Total Candidate"
-        subtitle1Count={11145}
-        subtitle1IncreaseCount={+12}
+        subtitle1Count={"111,45"}
+        subtitle1IncreaseCount={"+89"}
+        subtitle2="Who Attempted"
+        subtitle2Count={"1,114"}
+        subtitle2IncreaseCount={"+11"}
+        icon={candidateIcon}
       />
       <OverviewCardLarge
-        title="Candidates"
+        title="Candidates Source"
         style={{
           boxShadow: "none",
           border: "1px solid #DADCE0",
           borderRadius: 0,
           borderLeft: "none",
         }}
-        subtitle1="Total Candidate"
-        subtitle1Count={11145}
-        subtitle1IncreaseCount={+12}
+        subtitle1="E-mail"
+        subtitle1Count={"11,000"}
+        subtitle1IncreaseCount={"+12"}
+        subtitle2="Social Share"
+        subtitle2Count={"1,114"}
+        subtitle2IncreaseCount={"+11"}
+        subtitle3="Unique Link"
+        subtitle3Count={"145"}
+        subtitle3IncreaseCount={"+89"}
         extraContent={true}
-
-        // extraContent={
-        //   <DividerSection
-        //     subtitle1Count={3563}
-        //     subtitle1IncreaseCount={63}
-        //     subtitle1={"djf"}
-        //   />
-        // }
+        icon={sourceIcon}
       />
       <OverviewCard
         title="Total Purpose"
