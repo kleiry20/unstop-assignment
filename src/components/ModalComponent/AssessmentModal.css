@@ -1,0 +1,28 @@
+.form-item-label {
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #1c4980;
+}
+.ant-modal .ant-modal-content {
+  padding: 0;
+  border: 1px solid #dadce0;
+}
+
+.ant-modal .ant-modal-header {
+  padding: 1.88rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--system-stroke-2, #dadce0);
+}
+.ant-modal .ant-modal-body {
+  padding: 1.25rem 1.88rem;
+}
+.ant-modal .ant-modal-footer {
+  padding: 1.25rem 1.88rem;
+  box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);
+}
+
+.ant-input:placeholder-shown {
+  height: 3.125rem;
+}
