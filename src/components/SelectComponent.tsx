@@ -12,7 +12,6 @@ const onSearch = (value: string) => {
 const SelectComponent: React.FC = () => (
   <Select
     showSearch
-    // style={{height: "3.125rem"}}
     placeholder="Select"
     optionFilterProp="children"
     onChange={onChange}

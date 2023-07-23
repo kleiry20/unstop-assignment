@@ -113,7 +113,6 @@ export const OverviewCardLarge = ({
         display: "flex",
         flexDirection: "column",
         rowGap: "0.5rem",
-        // padding: "1rem 1.25rem 0rem 1.25rem",
         padding: "1rem 2rem 0rem 1rem",
       }}
       style={style}
@@ -229,7 +228,7 @@ export const OverviewCardLarge = ({
           <Divider type="vertical" style={{ fontSize: "2.5rem" }} />
         ) : null}
         {extraContent ? (
-          <div>
+          <div style={{ marginRight: "24px" }}>
             <div
               style={{
                 display: "flex",

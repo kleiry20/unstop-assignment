@@ -42,7 +42,15 @@ const SideBar = ({ menu }: any) => {
               <p>Dashboard</p>
             </div>
           </Menu.Item>
-          <Menu.Item style={{ padding: "1rem" }}>
+          <Menu.Item
+            style={{
+              padding: "1rem",
+              borderRadius: "0.5rem",
+              border: "1px solid var(--secondary-1, #0073E6)",
+              background: " #E5F1FC",
+              color: "var(--secondary-1, #0073E6)",
+            }}
+          >
             <div>
               <div>
                 <img src={SiderAssessmentIcon} alt="SiderAssessmentIcon" />
