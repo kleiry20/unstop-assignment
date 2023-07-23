@@ -7,11 +7,12 @@ import dateIcon from "../../assets/dateIcon.svg";
 import ellipsisIcon from "../../assets/ellipsis.svg";
 import verticalLineIcon from "../../assets/verticalLine.svg";
 import linkIcon from "../../assets/link.svg";
+import AvatarIcon from "../../assets/avatarIcon.svg";
 import { useState } from "react";
 import AssessmentModal from "../ModalComponent/AssessmentModal";
 
 export const EmptyAssessmentCard = () => {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const handleOpenModal = () => {
     setModalVisible(true);
@@ -23,7 +24,7 @@ export const EmptyAssessmentCard = () => {
 
   return (
     <Card
-      //   hoverable
+      className="assessment-card-view"
       style={{
         padding: "1.875rem",
         backgroundColor: "#F6F8FA",
@@ -43,7 +44,6 @@ export const EmptyAssessmentCard = () => {
           alignItems: "center",
           gap: "0.62rem",
         }}
-        // onClick={handleOpenModal}
       >
         <div
           onClick={handleOpenModal}
@@ -89,11 +89,9 @@ export const EmptyAssessmentCard = () => {
 const AssessmentCard = (props: any) => {
   return (
     <Card
-      //   hoverable
-      className={`${props.class}`}
+      className={`${props.class} assessment-card-view`}
       style={{
         padding: "1rem",
-        //   height: "13.0625rem",
         backgroundColor: "#FFF",
         borderRadius: "0.75rem",
         border: "1px solid #DADCE0",
@@ -232,15 +230,21 @@ const AssessmentCard = (props: any) => {
             >
               Share
             </Button>
-            <Avatar
-              style={{
-                borderRadius: "2.0455rem",
-                border: "1px solid var(--text-white, #FFF)",
-                background: "var(--pastel-neon-blue, #6548EE)",
-              }}
-            >
-              LP
-            </Avatar>
+            {props.showAvatar ? (
+              <div>
+                <img src={AvatarIcon} alt="AvatarIcon" />
+              </div>
+            ) : (
+              <Avatar
+                style={{
+                  borderRadius: "2.0455rem",
+                  border: "1px solid var(--text-white, #FFF)",
+                  background: "var(--pastel-neon-blue, #6548EE)",
+                }}
+              >
+                LP
+              </Avatar>
+            )}
           </div>
         </div>
       </div>

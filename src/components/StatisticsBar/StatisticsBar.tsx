@@ -41,8 +41,8 @@ export const OverviewCard = ({
       bodyStyle={{
         display: "flex",
         flexDirection: "column",
-        rowGap: "1rem",
-        padding: "1rem 1.25rem",
+        rowGap: "0.5rem",
+        padding: "0rem 1.25rem",
       }}
       style={style}
     >
@@ -91,8 +91,8 @@ export const OverviewCardLarge = ({
       bodyStyle={{
         display: "flex",
         flexDirection: "column",
-        rowGap: "1rem",
-        padding: "1rem 1.25rem",
+        rowGap: "0.5rem",
+        padding: "0rem 1.25rem",
       }}
       style={style}
     >
@@ -203,7 +203,57 @@ export const OverviewCardLarge = ({
             {subtitle1}
           </p>
         </div>
-        {/* extraContent={extraContent} */}
+        {extraContent ? (
+          <Divider type="vertical" style={{ fontSize: "2.5rem" }} />
+        ) : null}
+        {extraContent ? (
+          <div>
+            <div
+              style={{
+                display: "flex",
+                columnGap: "0.25rem",
+                alignItems: "center",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    margin: "0",
+                    color: "#1C4980",
+                    fontFamily: "Inter",
+                    fontSize: "1.25rem",
+                    fontWeight: "700",
+                  }}
+                >
+                  {subtitle1Count}
+                </p>
+              </div>
+              <div>
+                <p
+                  style={{
+                    margin: "0",
+                    fontFamily: "Inter",
+                    fontSize: " 0.75rem",
+                    fontWeight: "500",
+                    color: "#05C165",
+                  }}
+                >
+                  {subtitle1IncreaseCount}
+                </p>
+              </div>
+            </div>
+            <p
+              style={{
+                fontSize: "0.75rem",
+                fontStyle: "normal",
+                fontWeight: "500",
+                color: "#1C4980",
+              }}
+            >
+              {subtitle1}
+            </p>
+          </div>
+        ) : null}
       </div>
     </Card>
   );
@@ -211,7 +261,7 @@ export const OverviewCardLarge = ({
 
 const StatisticsBar: React.FC = () => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ display: "flex" }}>
       <OverviewCard
         title="Total Assessment"
         style={{
@@ -247,7 +297,8 @@ const StatisticsBar: React.FC = () => {
         subtitle1="Total Candidate"
         subtitle1Count={11145}
         subtitle1IncreaseCount={+12}
-        
+        extraContent={true}
+
         // extraContent={
         //   <DividerSection
         //     subtitle1Count={3563}

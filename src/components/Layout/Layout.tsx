@@ -49,7 +49,7 @@ const Layout = () => {
               >
                 <EmptyAssessmentCard />
                 <AssessmentCard />
-                <AssessmentCard />
+                <AssessmentCard showAvatar={true} />
                 <AssessmentCard class="only-mobile-view" />
                 <AssessmentCard class="only-mobile-view" />
                 <AssessmentCard class="only-mobile-view" />

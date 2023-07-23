@@ -91,11 +91,17 @@
   .card-left {
     flex-direction: unset !important;
   }
+  .assessment-card-view {
+    width: 100%;
+  }
 }
 
 @media (min-width: 992px) {
   .only-mobile-view {
     display: none;
+  }
+  .assessment-card-view {
+    width: 31%;
   }
 }
 
